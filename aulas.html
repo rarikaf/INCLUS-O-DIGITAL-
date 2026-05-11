@@ -1,249 +1,265 @@
 <!-- arquivo: aulas.php -->
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aulas - Inclusão Digital</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aulas - Inclusão Digital</title>
 
-    <!-- Ligação com CSS -->
-    <link rel="stylesheet" href="styles.css">
 
-    <!-- Acessibilidade -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Ligação com CSS -->
+  <link rel="stylesheet" href="stylee.css">
+
+  <!-- Acessibilidade -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
+
 <body>
 
-    <!-- BOTÃO DE ACESSIBILIDADE -->
-    <div class="acessibilidade">
-        <button onclick="aumentarFonte()">A+</button>
-        <button onclick="diminuirFonte()">A-</button>
-        <button onclick="modoContraste()">Alto Contraste</button>
-    </div>
+  <!-- BOTÃO DE ACESSIBILIDADE -->
+  <div class="acessibilidade">
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="diminuirFonte()">A-</button>
+    <button onclick="modoContraste()">Alto Contraste</button>
+  </div>
 
-    <!-- MENU -->
-    <header>
-        <nav class="menu">
-            <h1>Inclusão Digital</h1>
+  <!-- MENU -->
+  <header>
+    <nav>
+    <div class="logo">Inclusão Digital</div>
 
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="conteudos.html">Conteúdos</a></li>
-                <li><a href="beneficios.html">Benefícios</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="aulas.php" class="ativo">Aulas</a></li>
-            </ul>
-        </nav>
-    </header>
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="conteudos.html">Conteúdos</a></li>
+        <li><a href="beneficios.html">Benefícios</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="aulas.html">Aulas</a></li>
+    </ul>
+</nav>
+  </header>
 
-    <!-- BANNER -->
-    <section class="banner">
-        <h2>Aprenda Informática Básica e Inclusão Digital</h2>
-        <p>
-            Este portal foi criado para ajudar iniciantes a aprenderem a utilizar o computador,
-            navegar na internet e desenvolver habilidades digitais.
-        </p>
+  <!-- BANNER -->
+  <section class="banner">
+    <h2>Aprenda Informática Básica e Inclusão Digital</h2>
+    <p>
+      Este portal foi criado para ajudar iniciantes a aprenderem a utilizar o computador,
+      navegar na internet e desenvolver habilidades digitais.
+    </p>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <main class="container">
+
+    <!-- MÓDULO 1 -->
+    <section class="modulo" id="modulo1"></section>
+
+    <h2>Módulo 1 - Conhecendo o Computador</h2>
+
     </section>
 
-    <!-- CONTEÚDO -->
-    <main class="container">
+    <div class="bloco-aula">
+      <h3>Aula 1 - O que é um computador?</h3>
 
-        <!-- MÓDULO 1 -->
-        <section class="modulo">
-            <h2>Módulo 1 - Conhecendo o Computador</h2>
+      <p>
+        O computador é uma máquina eletrônica utilizada para realizar tarefas,
+        armazenar informações e acessar a internet.
+      </p>
 
-            <div class="bloco-aula">
-                <h3>Aula 1 - O que é um computador?</h3>
+      <p>
+        Existem diferentes tipos de computadores:
+      </p>
 
-                <p>
-                    O computador é uma máquina eletrônica utilizada para realizar tarefas,
-                    armazenar informações e acessar a internet.
-                </p>
+      <ul>
+        <li>Desktop</li>
+        <li>Notebook</li>
+        <li>Tablet</li>
+        <li>Smartphone</li>
+      </ul>
 
-                <p>
-                    Existem diferentes tipos de computadores:
-                </p>
+      <p>
+        O computador ajuda em estudos, trabalho, comunicação e entretenimento.
+      </p>
+    </div>
 
-                <ul>
-                    <li>Desktop</li>
-                    <li>Notebook</li>
-                    <li>Tablet</li>
-                    <li>Smartphone</li>
-                </ul>
+    <div class="bloco-aula">
+      <h3>Aula 2 - Partes do computador</h3>
 
-                <p>
-                    O computador ajuda em estudos, trabalho, comunicação e entretenimento.
-                </p>
-            </div>
+      <p>
+        Um computador possui partes importantes:
+      </p>
 
-            <div class="bloco-aula">
-                <h3>Aula 2 - Partes do computador</h3>
+      <ul>
+        <li><strong>Monitor:</strong> tela onde aparecem as informações.</li>
+        <li><strong>Teclado:</strong> usado para digitar.</li>
+        <li><strong>Mouse:</strong> usado para clicar e mover o cursor.</li>
+        <li><strong>CPU:</strong> responsável pelo processamento.</li>
+      </ul>
 
-                <p>
-                    Um computador possui partes importantes:
-                </p>
+      <p>
+        Aprender a identificar essas partes é o primeiro passo para usar o computador.
+      </p>
+    </div>
+    </section>
 
-                <ul>
-                    <li><strong>Monitor:</strong> tela onde aparecem as informações.</li>
-                    <li><strong>Teclado:</strong> usado para digitar.</li>
-                    <li><strong>Mouse:</strong> usado para clicar e mover o cursor.</li>
-                    <li><strong>CPU:</strong> responsável pelo processamento.</li>
-                </ul>
+    <!-- MÓDULO 2 -->
+    <section class="modulo" id="modulo2"></section>
 
-                <p>
-                    Aprender a identificar essas partes é o primeiro passo para usar o computador.
-                </p>
-            </div>
-        </section>
+    <h2>Módulo 2 - Aprendendo a Usar o Mouse e Teclado</h2>
 
-        <!-- MÓDULO 2 -->
-        <section class="modulo">
-            <h2>Módulo 2 - Aprendendo a Usar o Mouse e Teclado</h2>
+    </section>
 
-            <div class="bloco-aula">
-                <h3>Aula 1 - Como usar o mouse</h3>
+    <div class="bloco-aula">
+      <h3>Aula 1 - Como usar o mouse</h3>
 
-                <p>
-                    O mouse permite interagir com o computador.
-                </p>
+      <p>
+        O mouse permite interagir com o computador.
+      </p>
 
-                <ul>
-                    <li>Clique esquerdo: selecionar.</li>
-                    <li>Duplo clique: abrir programas.</li>
-                    <li>Clique direito: abrir opções.</li>
-                    <li>Scroll: rolar páginas.</li>
-                </ul>
+      <ul>
+        <li>Clique esquerdo: selecionar.</li>
+        <li>Duplo clique: abrir programas.</li>
+        <li>Clique direito: abrir opções.</li>
+        <li>Scroll: rolar páginas.</li>
+      </ul>
 
-                <p>
-                    Pratique movimentando o cursor pela tela.
-                </p>
-            </div>
+      <p>
+        Pratique movimentando o cursor pela tela.
+      </p>
+    </div>
 
-            <div class="bloco-aula">
-                <h3>Aula 2 - Aprendendo o teclado</h3>
+    <div class="bloco-aula">
+      <h3>Aula 2 - Aprendendo o teclado</h3>
 
-                <p>
-                    O teclado é usado para escrever textos e comandos.
-                </p>
+      <p>
+        O teclado é usado para escrever textos e comandos.
+      </p>
 
-                <ul>
-                    <li>Enter: confirmar ações.</li>
-                    <li>Backspace: apagar letras.</li>
-                    <li>Espaço: separar palavras.</li>
-                    <li>Shift: letras maiúsculas.</li>
-                </ul>
+      <ul>
+        <li>Enter: confirmar ações.</li>
+        <li>Backspace: apagar letras.</li>
+        <li>Espaço: separar palavras.</li>
+        <li>Shift: letras maiúsculas.</li>
+      </ul>
 
-                <p>
-                    Digitar corretamente melhora sua experiência digital.
-                </p>
-            </div>
-        </section>
+      <p>
+        Digitar corretamente melhora sua experiência digital.
+      </p>
+    </div>
+    </section>
 
-        <!-- MÓDULO 3 -->
-        <section class="modulo">
-            <h2>Módulo 3 - Navegando na Internet</h2>
+    <!-- MÓDULO 3 -->
+    <section class="modulo" id="modulo3"></section>
 
-            <div class="bloco-aula">
-                <h3>Aula 1 - O que é internet?</h3>
+    <h2>Módulo 3 - Navegando na Internet</h2>
 
-                <p>
-                    A internet conecta pessoas do mundo inteiro.
-                </p>
+    </section>
 
-                <p>
-                    Com ela é possível:
-                </p>
+    <div class="bloco-aula">
+      <h3>Aula 1 - O que é internet?</h3>
 
-                <ul>
-                    <li>Assistir vídeos</li>
-                    <li>Conversar com pessoas</li>
-                    <li>Estudar online</li>
-                    <li>Pesquisar informações</li>
-                </ul>
-            </div>
+      <p>
+        A internet conecta pessoas do mundo inteiro.
+      </p>
 
-            <div class="bloco-aula">
-                <h3>Aula 2 - Como pesquisar no Google</h3>
+      <p>
+        Com ela é possível:
+      </p>
 
-                <p>
-                    O Google é um mecanismo de pesquisa.
-                </p>
+      <ul>
+        <li>Assistir vídeos</li>
+        <li>Conversar com pessoas</li>
+        <li>Estudar online</li>
+        <li>Pesquisar informações</li>
+      </ul>
+    </div>
 
-                <p>
-                    Para pesquisar:
-                </p>
+    <div class="bloco-aula">
+      <h3>Aula 2 - Como pesquisar no Google</h3>
 
-                <ol>
-                    <li>Abra o navegador.</li>
-                    <li>Digite www.google.com</li>
-                    <li>Escreva o que deseja procurar.</li>
-                    <li>Pressione Enter.</li>
-                </ol>
+      <p>
+        O Google é um mecanismo de pesquisa.
+      </p>
 
-                <p>
-                    Sempre verifique se os sites acessados são confiáveis.
-                </p>
-            </div>
-        </section>
+      <p>
+        Para pesquisar:
+      </p>
 
-        <!-- MÓDULO 4 -->
-        <section class="modulo">
-            <h2>Módulo 4 - Diversidade Digital</h2>
+      <ol>
+        <li>Abra o navegador.</li>
+        <li>Digite www.google.com</li>
+        <li>Escreva o que deseja procurar.</li>
+        <li>Pressione Enter.</li>
+      </ol>
 
-            <div class="bloco-aula">
-                <h3>Aula 1 - O que é diversidade digital?</h3>
+      <p>
+        Sempre verifique se os sites acessados são confiáveis.
+      </p>
+    </div>
+    </section>
 
-                <p>
-                    Diversidade digital significa permitir que todas as pessoas tenham acesso
-                    à tecnologia e saibam utilizá-la.
-                </p>
+    <!-- MÓDULO 4 -->
+    <section class="modulo" id="modulo4"></section>
 
-                <p>
-                    Isso ajuda na educação, emprego e comunicação.
-                </p>
-            </div>
+    <h2>Módulo 4 - Diversidade Digital</h2>
 
-            <div class="bloco-aula">
-                <h3>Aula 2 - Segurança na internet</h3>
+    </section>
 
-                <p>
-                    É importante navegar com segurança.
-                </p>
+    <div class="bloco-aula">
+      <h3>Aula 1 - O que é diversidade digital?</h3>
 
-                <ul>
-                    <li>Não compartilhar senhas.</li>
-                    <li>Evitar clicar em links desconhecidos.</li>
-                    <li>Usar antivírus.</li>
-                    <li>Desconfiar de golpes.</li>
-                </ul>
+      <p>
+        Diversidade digital significa permitir que todas as pessoas tenham acesso
+        à tecnologia e saibam utilizá-la.
+      </p>
 
-                <p>
-                    Segurança digital protege suas informações pessoais.
-                </p>
-            </div>
-        </section>
+      <p>
+        Isso ajuda na educação, emprego e comunicação.
+      </p>
+    </div>
 
-    </main>
+    <div class="bloco-aula">
+      <h3>Aula 2 - Segurança na internet</h3>
 
-    <!-- RODAPÉ -->
-    <footer>
-        <p>© 2026 - Projeto Inclusão Digital</p>
-    </footer>
+      <p>
+        É importante navegar com segurança.
+      </p>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        function aumentarFonte() {
-            document.body.style.fontSize = "18px";
-        }
+      <ul>
+        <li>Não compartilhar senhas.</li>
+        <li>Evitar clicar em links desconhecidos.</li>
+        <li>Usar antivírus.</li>
+        <li>Desconfiar de golpes.</li>
+      </ul>
 
-        function diminuirFonte() {
-            document.body.style.fontSize = "14px";
-        }
+      <p>
+        Segurança digital protege suas informações pessoais.
+      </p>
+    </div>
+    </section>
 
-        function modoContraste() {
-            document.body.classList.toggle("contraste");
-        }
-    </script>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2026 - Projeto Inclusão Digital</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function aumentarFonte() {
+      document.body.style.fontSize = "18px";
+    }
+
+    function diminuirFonte() {
+      document.body.style.fontSize = "14px";
+    }
+
+    function modoContraste() {
+      document.body.classList.toggle("contraste");
+    }
+  </script>
 
 </body>
+
 </html>
