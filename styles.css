@@ -12,11 +12,13 @@ body{
     color: white;
 }
 
+
 /* MENU */
 
-header{
-    background: #0f172a;
-    padding: 18px 40px;
+header {
+    background: #020617;
+    color: white;
+    padding: 15px;
     border-bottom: 1px solid #1e293b;
 }
 
