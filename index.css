@@ -1,0 +1,422 @@
+/* =========================================================
+   INDEX.CSS
+========================================================= */
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+
+    background:
+    radial-gradient(circle at top,
+    #1e293b 0%,
+    #020617 60%);
+
+    color: #e2e8f0;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --bg: #020617;
+    --primary: #38bdf8;
+    --primary-dark: #0ea5e9;
+
+    --text: #e2e8f0;
+    --text-secondary: #94a3b8;
+
+    --card: rgba(15, 23, 42, 0.85);
+
+    --border: rgba(255,255,255,0.08);
+
+    --shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+
+    --shadow-hover:
+    0 20px 40px rgba(0,0,0,0.45);
+
+    --glow:
+    0 0 10px rgba(56,189,248,0.35),
+    0 0 30px rgba(56,189,248,0.15);
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav{
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background: rgba(2,6,23,0.75);
+
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.logo{
+    font-size: 1.7rem;
+    font-weight: 800;
+
+    color: var(--primary);
+
+    text-shadow: var(--glow);
+}
+
+nav ul{
+    display: flex;
+    gap: 18px;
+
+    list-style: none;
+}
+
+nav ul li a{
+    position: relative;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-weight: 600;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+nav ul li a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    bottom: 6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: var(--primary);
+
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: var(--primary);
+
+    background: rgba(255,255,255,0.05);
+}
+
+nav ul li a:hover::after{
+    width: calc(100% - 28px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    height: 100vh;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+    linear-gradient(
+        rgba(2,6,23,0.78),
+        rgba(2,6,23,0.92)
+    ),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop");
+
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: #020617;
+}
+
+/* brilho decorativo */
+
+.hero::before{
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(56,189,248,0.08);
+
+    filter: blur(120px);
+
+    top: -120px;
+    right: -100px;
+
+    border-radius: 50%;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 20px;
+
+    animation: fadeUp 1s ease;
+}
+
+.hero-content h1{
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    line-height: 1.1;
+
+    text-shadow: var(--glow);
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+
+    color: var(--text-secondary);
+
+    line-height: 1.8;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 0;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.secao{
+    text-align: center;
+}
+
+.secao h2{
+    font-size: 2.5rem;
+
+    color: var(--primary);
+
+    margin-bottom: 15px;
+
+    text-shadow: var(--glow);
+}
+
+.secao p{
+    color: var(--text-secondary);
+
+    line-height: 1.8;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards{
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 28px;
+}
+
+.card{
+    position: relative;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.35s ease;
+
+    box-shadow: var(--shadow);
+}
+
+.card::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(56,189,248,0.08),
+        transparent 45%
+    );
+
+    opacity: 0;
+
+    transition: 0.35s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+
+    border-color: rgba(56,189,248,0.4);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.card:hover::before{
+    opacity: 1;
+}
+
+.card h3{
+    color: var(--primary);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 15px;
+}
+
+.card p{
+    color: var(--text-secondary);
+
+    line-height: 1.8;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background: rgba(15,23,42,0.95);
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: var(--text-secondary);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media(max-width: 992px){
+
+    .hero{
+        background-size: 100%;
+    }
+}
+
+@media(max-width: 768px){
+
+    nav{
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 16px 5%;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero{
+        min-height: 100vh;
+
+        padding: 120px 20px;
+
+        background-size: 140%;
+        background-attachment: scroll;
+    }
+
+    .hero-content h1{
+        font-size: 3rem;
+    }
+
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    .secao h2{
+        font-size: 2rem;
+    }
+
+    .card{
+        padding: 28px;
+    }
+}
