@@ -201,20 +201,16 @@ nav ul li a:hover::after {
     color: var(--text-secondary);
 }
 
-/* =========================================================
-   FOOTER 
-========================================================= */
 
-footer {
-    width: 100%;
-    margin: 0;
+footer{
+    margin-top: 80px;
+
     background: rgba(15,23,42,0.95);
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid var(--border);
     text-align: center;
-    padding: 40px 10px;
-    color: #94a3b8;
+    padding: 30px;
+    color: var(--text-secondary);
 }
-
 /* =========================================================
    RESPONSIVO
 ========================================================= */
