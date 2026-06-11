@@ -1,128 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contato - Inclusão Digital</title>
+    <title>Contato - Inclusão Digital</title>
 
-<link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="contato.css">
 
-<style>
-#status {
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: bold;
-    display: none;
-    animation: aparecer 0.4s ease;
-}
+    <style>
+        #status {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+            animation: aparecer 0.4s ease;
+        }
 
-#status.sucesso {
-    background-color: #d4f8d4;
-    color: #1a7f1a;
-    border: 2px solid #1a7f1a;
-}
+        #status.sucesso {
+            background-color: #d4f8d4;
+            color: #1a7f1a;
+            border: 2px solid #1a7f1a;
+        }
 
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-</style>
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 
 </head>
 
 <body>
 
-<nav>
+    <nav>
 
-    <div class="logo">
-        Inclusão Digital
-    </div>
+        <div class="logo">
+            Inclusão Digital
+        </div>
 
-   <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="conteudos.html">Conteúdos</a></li>
-        <li><a href="beneficios.html">Benefícios</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-    </ul>
-</nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="conteudos.html">Conteúdos</a></li>
+            <li><a href="beneficios.html">Benefícios</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
-<header class="hero">
-  <div class="hero-content">
-    <h1>Entre em Contato</h1>
-    <p>Tire dúvidas ou envie sugestões sobre o projeto</p>
-  </div>
-</header>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Entre em Contato</h1>
+            <p>Tire dúvidas ou envie sugestões sobre o projeto</p>
+        </div>
+    </header>
 
-<main class="container">
+    <main class="container">
 
-    <h1>Fale Conosco</h1>
+        <h1>Fale Conosco</h1>
 
-    <p>
-        Preencha o formulário abaixo e entraremos em contato o mais rápido possível.
-    </p>
+        <p>
+            Preencha o formulário abaixo e entraremos em contato o mais rápido possível.
+        </p>
 
-    <div class="beneficio-card">
-<br><br>
+        <div class="beneficio-card">
+            <br><br>
 
-        <form onsubmit="enviarMensagem(event)">
+            <form onsubmit="enviarMensagem(event)">
 
-            <h3>Formulário de Contato</h3>
+                <h3>Formulário de Contato</h3>
 
-            <label>Nome</label><br>
-            <input type="text" id="nome" placeholder="Digite seu nome"
-            style="width:100%; padding:12px; margin:10px 0; border-radius:10px; border:none;">
+                <label>Nome</label><br>
+                <input type="text" id="nome" placeholder="Digite seu nome"
+                    style="width:100%; padding:12px; margin:10px 0; border-radius:10px; border:none;">
 
-            <label>Email</label><br>
-            <input type="email" id="email" placeholder="Digite seu email"
-            style="width:100%; padding:12px; margin:10px 0; border-radius:10px; border:none;">
+                <label>Email</label><br>
+                <input type="email" id="email" placeholder="Digite seu email"
+                    style="width:100%; padding:12px; margin:10px 0; border-radius:10px; border:none;">
 
-            <label>Mensagem</label><br>
-            <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem"
-            style="width:100%; padding:12px; margin:10px 0; border-radius:10px; border:none;"></textarea>
+                <label>Mensagem</label><br>
+                <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem"
+                    style="width:100%; padding:12px; margin:10px 0; border-radius:10px; border:none;"></textarea>
 
-            <button class="btn" type="submit">Enviar Mensagem</button>
+                <button class="btn" type="submit">Enviar Mensagem</button>
 
-        </form>
+            </form>
 
-        <div id="status"></div>
+            <div id="status"></div>
 
-    </div>
+        </div>
 
-</main>
+    </main>
 
-<footer>
-    <p>© 2026 Inclusão Digital — Todos os direitos reservados</p>
-</footer>
+    <footer>
+        <p>© 2026 Inclusão Digital — Todos os direitos reservados</p>
+    </footer>
 
-<script>
-function enviarMensagem(event) {
-    event.preventDefault();
+    <script>
+        function enviarMensagem(event) {
+            event.preventDefault();
 
-    const status = document.getElementById("status");
+            const status = document.getElementById("status");
 
-    status.className = "sucesso";
-    status.style.display = "block";
-    status.innerHTML = "✅ Mensagem enviada com sucesso!";
+            status.className = "sucesso";
+            status.style.display = "block";
+            status.innerHTML = "✅ Mensagem enviada com sucesso!";
 
-    document.getElementById("nome").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("mensagem").value = "";
+            document.getElementById("nome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("mensagem").value = "";
 
-    setTimeout(() => {
-        status.style.display = "none";
-    }, 3000);
-}
-</script>
+            setTimeout(() => {
+                status.style.display = "none";
+            }, 3000);
+        }
+    </script>
 
 </body>
+
 </html>
