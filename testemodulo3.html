@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inclusão Digital</title>
   <link rel="stylesheet" href="teste.css">
+</head>
 
 <body>
+
   <nav>
     <div class="logo">Inclusão Digital</div>
     <ul>
@@ -27,31 +29,47 @@
 
     <form>
 
-      <p><b>1. O que é a internet?</b></p>
-      <label><input type="radio" name="q1"> Um programa de computador</label><br>
-      <label><input type="radio" name="q1"> Uma rede mundial de computadores</label><br>
-      <label><input type="radio" name="q1"> Um navegador</label><br>
+      <p>
+        <b>1. O que é a internet?</b>
+        <span id="r1"></span>
+      </p>
+
+      <label><input type="radio" name="q1" value="errado" required> Um programa de computador</label><br>
+      <label><input type="radio" name="q1" value="certo"> Uma rede mundial de computadores</label><br>
+      <label><input type="radio" name="q1" value="errado"> Um navegador</label><br>
 
       <br>
 
-      <p><b>2. Qual a melhor forma de pesquisar na internet?</b></p>
-      <label><input type="radio" name="q2"> Usar palavras claras e objetivas</label><br>
-      <label><input type="radio" name="q2"> Digitar qualquer coisa</label><br>
-      <label><input type="radio" name="q2"> Clicar em qualquer site</label><br>
+      <p>
+        <b>2. Qual a melhor forma de pesquisar na internet?</b>
+        <span id="r2"></span>
+      </p>
+
+      <label><input type="radio" name="q2" value="certo" required> Usar palavras claras e objetivas</label><br>
+      <label><input type="radio" name="q2" value="errado"> Digitar qualquer coisa</label><br>
+      <label><input type="radio" name="q2" value="errado"> Clicar em qualquer site</label><br>
 
       <br>
 
-      <p><b>3. O que é importante para segurança online?</b></p>
-      <label><input type="radio" name="q3"> Compartilhar senhas com amigos</label><br>
-      <label><input type="radio" name="q3"> Clicar em todos os links</label><br>
-      <label><input type="radio" name="q3"> Não clicar em links desconhecidos</label><br>
+      <p>
+        <b>3. O que é importante para segurança online?</b>
+        <span id="r3"></span>
+      </p>
+
+      <label><input type="radio" name="q3" value="errado" required> Compartilhar senhas com amigos</label><br>
+      <label><input type="radio" name="q3" value="errado"> Clicar em todos os links</label><br>
+      <label><input type="radio" name="q3" value="certo"> Não clicar em links desconhecidos</label><br>
 
       <br>
 
-      <p><b>4. O que devemos fazer antes de confiar em uma informação?</b></p>
-      <label><input type="radio" name="q4"> Verificar a fonte</label><br>
-      <label><input type="radio" name="q4"> Acreditar imediatamente</label><br>
-      <label><input type="radio" name="q4"> Compartilhar sem ler</label><br>
+      <p>
+        <b>4. O que devemos fazer antes de confiar em uma informação?</b>
+        <span id="r4"></span>
+      </p>
+
+      <label><input type="radio" name="q4" value="certo" required> Verificar a fonte</label><br>
+      <label><input type="radio" name="q4" value="errado"> Acreditar imediatamente</label><br>
+      <label><input type="radio" name="q4" value="errado"> Compartilhar sem ler</label><br>
 
     </form>
 
@@ -68,11 +86,71 @@
       <p><b>4:</b> Verificar a fonte</p>
 
     </details>
-    <a href="modulo4.html" class="btn">Ir para Módulo 4 →</a>
+
+    <button type="button" class="btn" onclick="verificarTeste()">
+      Corrigir e Ir para Módulo 4 →
+    </button>
+
   </main>
+
   <footer>
     <p>© 2026 Inclusão Digital</p>
   </footer>
-</body>
 
+<script>
+function verificarTeste() {
+
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    const q3 = document.querySelector('input[name="q3"]:checked');
+    const q4 = document.querySelector('input[name="q4"]:checked');
+
+    if (!q1 || !q2 || !q3 || !q4) {
+        alert("Responda todas as perguntas.");
+        return;
+    }
+
+    let acertos = 0;
+
+    document.getElementById("r1").innerHTML = "";
+    document.getElementById("r2").innerHTML = "";
+    document.getElementById("r3").innerHTML = "";
+    document.getElementById("r4").innerHTML = "";
+
+    if (q1.value === "certo") {
+        acertos++;
+        document.getElementById("r1").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r1").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (q2.value === "certo") {
+        acertos++;
+        document.getElementById("r2").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r2").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (q3.value === "certo") {
+        acertos++;
+        document.getElementById("r3").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r3").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (q4.value === "certo") {
+        acertos++;
+        document.getElementById("r4").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r4").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (acertos === 4) {
+        alert("Parabéns! Você acertou todas as questões.");
+        window.location.href = "modulo4.html";
+    }
+}
+</script>
+
+</body>
 </html>

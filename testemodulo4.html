@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inclusão Digital</title>
 <link rel="stylesheet" href="teste.css">
+</head>
 
 <body>
 
@@ -29,31 +30,47 @@
 
 <form>
 
-  <p><b>1. O que é inclusão digital?</b></p>
-  <label><input type="radio" name="q1"> Ter apenas celular</label><br>
-  <label><input type="radio" name="q1"> Garantir acesso e uso da tecnologia para todos</label><br>
-  <label><input type="radio" name="q1"> Usar só redes sociais</label><br>
+  <p>
+    <b>1. O que é inclusão digital?</b>
+    <span id="r1"></span>
+  </p>
+
+  <label><input type="radio" name="q1" value="errado" required> Ter apenas celular</label><br>
+  <label><input type="radio" name="q1" value="certo"> Garantir acesso e uso da tecnologia para todos</label><br>
+  <label><input type="radio" name="q1" value="errado"> Usar só redes sociais</label><br>
 
   <br>
 
-  <p><b>2. Qual é um benefício da inclusão digital?</b></p>
-  <label><input type="radio" name="q2"> Menos acesso à informação</label><br>
-  <label><input type="radio" name="q2"> Mais oportunidades de trabalho</label><br>
-  <label><input type="radio" name="q2"> Menos comunicação</label><br>
+  <p>
+    <b>2. Qual é um benefício da inclusão digital?</b>
+    <span id="r2"></span>
+  </p>
+
+  <label><input type="radio" name="q2" value="errado" required> Menos acesso à informação</label><br>
+  <label><input type="radio" name="q2" value="certo"> Mais oportunidades de trabalho</label><br>
+  <label><input type="radio" name="q2" value="errado"> Menos comunicação</label><br>
 
   <br>
 
-  <p><b>3. O que ajuda a proteger seus dados?</b></p>
-  <label><input type="radio" name="q3"> Usar senhas fortes</label><br>
-  <label><input type="radio" name="q3"> Compartilhar senhas com amigos</label><br>
-  <label><input type="radio" name="q3"> Usar a mesma senha sempre</label><br>
+  <p>
+    <b>3. O que ajuda a proteger seus dados?</b>
+    <span id="r3"></span>
+  </p>
+
+  <label><input type="radio" name="q3" value="certo" required> Usar senhas fortes</label><br>
+  <label><input type="radio" name="q3" value="errado"> Compartilhar senhas com amigos</label><br>
+  <label><input type="radio" name="q3" value="errado"> Usar a mesma senha sempre</label><br>
 
   <br>
 
-  <p><b>4. O que devemos evitar na internet?</b></p>
-  <label><input type="radio" name="q4"> Sites seguros</label><br>
-  <label><input type="radio" name="q4"> Evitar golpes online</label><br>
-  <label><input type="radio" name="q4"> Clicar em links desconhecidos</label><br>
+  <p>
+    <b>4. O que devemos evitar na internet?</b>
+    <span id="r4"></span>
+  </p>
+
+  <label><input type="radio" name="q4" value="errado" required> Sites seguros</label><br>
+  <label><input type="radio" name="q4" value="errado"> Evitar golpes online</label><br>
+  <label><input type="radio" name="q4" value="certo"> Clicar em links desconhecidos</label><br>
 
 </form>
 
@@ -73,13 +90,70 @@
 
 <br>
 
-<a href="modulofinalizado.html" class="btn">Finalizar Curso</a>
+<button type="button" class="btn" onclick="verificarTeste()">
+    Finalizar Curso
+</button>
 
 </main>
 
 <footer>
     <p>© 2026 Inclusão Digital</p>
 </footer>
+
+<script>
+function verificarTeste() {
+
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    const q3 = document.querySelector('input[name="q3"]:checked');
+    const q4 = document.querySelector('input[name="q4"]:checked');
+
+    if (!q1 || !q2 || !q3 || !q4) {
+        alert("Responda todas as perguntas.");
+        return;
+    }
+
+    let acertos = 0;
+
+    document.getElementById("r1").innerHTML = "";
+    document.getElementById("r2").innerHTML = "";
+    document.getElementById("r3").innerHTML = "";
+    document.getElementById("r4").innerHTML = "";
+
+    if (q1.value === "certo") {
+        acertos++;
+        document.getElementById("r1").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r1").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (q2.value === "certo") {
+        acertos++;
+        document.getElementById("r2").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r2").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (q3.value === "certo") {
+        acertos++;
+        document.getElementById("r3").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r3").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (q4.value === "certo") {
+        acertos++;
+        document.getElementById("r4").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r4").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (acertos === 4) {
+        alert("Parabéns! Você concluiu o curso!");
+        window.location.href = "modulofinalizado.html";
+    }
+}
+</script>
 
 </body>
 </html>

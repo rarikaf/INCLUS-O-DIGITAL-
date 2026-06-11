@@ -1,4 +1,3 @@
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -29,24 +28,36 @@
 
 <form>
 
-  <p><b>1. O que é um computador?</b></p>
-  <label><input type="radio" name="q1"> Uma máquina que apenas joga jogos</label><br>
-  <label><input type="radio" name="q1"> Uma máquina que processa e armazena informações</label><br>
-  <label><input type="radio" name="q1"> Um tipo de celular</label><br>
+  <p>
+    <b>1. O que é um computador?</b>
+    <span id="r1"></span>
+  </p>
+
+  <label><input type="radio" name="q1" value="errado" required> Uma máquina que apenas joga jogos</label><br>
+  <label><input type="radio" name="q1" value="certo"> Uma máquina que processa e armazena informações</label><br>
+  <label><input type="radio" name="q1" value="errado"> Um tipo de celular</label><br>
 
   <br>
 
-  <p><b>2. Qual é o “cérebro” do computador?</b></p>
-  <label><input type="radio" name="q2"> Monitor</label><br>
-  <label><input type="radio" name="q2"> CPU</label><br>
-  <label><input type="radio" name="q2"> Teclado</label><br>
+  <p>
+    <b>2. Qual é o “cérebro” do computador?</b>
+    <span id="r2"></span>
+  </p>
+
+  <label><input type="radio" name="q2" value="errado" required> Monitor</label><br>
+  <label><input type="radio" name="q2" value="certo"> CPU</label><br>
+  <label><input type="radio" name="q2" value="errado"> Teclado</label><br>
 
   <br>
 
-  <p><b>3. Qual dispositivo usamos para digitar?</b></p>
-  <label><input type="radio" name="q3"> Mouse</label><br>
-  <label><input type="radio" name="q3"> Teclado</label><br>
-  <label><input type="radio" name="q3"> Monitor</label><br>
+  <p>
+    <b>3. Qual dispositivo usamos para digitar?</b>
+    <span id="r3"></span>
+  </p>
+
+  <label><input type="radio" name="q3" value="errado" required> Mouse</label><br>
+  <label><input type="radio" name="q3" value="certo"> Teclado</label><br>
+  <label><input type="radio" name="q3" value="errado"> Monitor</label><br>
 
 </form>
 
@@ -63,11 +74,61 @@
 
 </details>
 
-<a href="modulo2.html" class="btn">Ir para Módulo 2 →</a>
-        </main>
-        <footer>
-            <p>© 2026 Inclusão Digital</p>
-        </footer>
-</body>
+<button type="button" class="btn" onclick="verificarTeste()">
+    Corrigir e Ir para Módulo 2 →
+</button>
 
+</main>
+
+<footer>
+    <p>© 2026 Inclusão Digital</p>
+</footer>
+
+<script>
+function verificarTeste() {
+
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    const q3 = document.querySelector('input[name="q3"]:checked');
+
+    if (!q1 || !q2 || !q3) {
+        alert("Responda todas as perguntas.");
+        return;
+    }
+
+    let acertos = 0;
+
+    document.getElementById("r1").innerHTML = "";
+    document.getElementById("r2").innerHTML = "";
+    document.getElementById("r3").innerHTML = "";
+
+    if (q1.value === "certo") {
+        acertos++;
+        document.getElementById("r1").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r1").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (q2.value === "certo") {
+        acertos++;
+        document.getElementById("r2").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r2").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (q3.value === "certo") {
+        acertos++;
+        document.getElementById("r3").innerHTML = " — ✅ Resposta correta";
+    } else {
+        document.getElementById("r3").innerHTML = " — ❌ Resposta incorreta";
+    }
+
+    if (acertos === 3) {
+        alert("Parabéns! Você acertou todas as questões.");
+        window.location.href = "modulo2.html";
+    }
+}
+</script>
+
+</body>
 </html>

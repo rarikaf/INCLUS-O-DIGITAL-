@@ -262,7 +262,6 @@ nav ul li a:hover::after{
     box-shadow: var(--shadow);
 }
 
-/* 🔧 CORREÇÃO IMPORTANTE */
 .card-modulo::before{
     content: "";
     position: absolute;
@@ -291,7 +290,69 @@ nav ul li a:hover::after{
 }
 
 /* =========================================================
-   FOOTER (NÃO QUEBRA MAIS)
+   BOTÃO NOVO (ADICIONADO)
+========================================================= */
+
+.btn{
+    background: linear-gradient(135deg, #04709e, #12648a);
+    color: #ffffff;
+
+    border: none;
+
+    padding: 12px 19px;
+
+    border-radius: 14px;
+
+    font-weight: 700;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 10px 25px rgba(56,189,248,0.25);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* brilho animado */
+.btn::before{
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+
+    transition: 0.5s;
+}
+
+.btn:hover::before{
+    left: 100%;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(56,189,248,0.4);
+}
+
+.btn:active{
+    transform: scale(0.97);
+}
+
+/* =========================================================
+   FOOTER
 ========================================================= */
 
 footer{
@@ -321,6 +382,5 @@ footer{
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
